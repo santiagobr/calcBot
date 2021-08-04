@@ -1,0 +1,8 @@
+.container-figures {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1400px;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}

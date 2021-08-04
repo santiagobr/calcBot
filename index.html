@@ -1,13 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./img/calcBot_icon.svg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/calcBot_icon.svg" />
     <title>CalcBot | SBR Personal Project</title>
-</head>
-<body>
-    
-</body>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/figures.css" />
+    <link
+      rel="stylesheet"
+      href="./css/figures_desktop.css"
+      media="screen and (min-width: 1200px)"
+    />
+    <link rel="stylesheet" href="./css/discounts.css" />
+    <link
+      rel="stylesheet"
+      href="./css/discounts_desktop.css"
+      media="screen and (min-width: 1200px)"
+    />
+
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="main-header__logo">
+        <figure>
+          <img src="./img/calcBot_icon.svg" alt="" />
+        </figure>
+        <h2 class="main-header__title">CalcBot</h2>
+      </div>
+    </header>
+    <main class="main-container">
+      <section class="main-container__intro">
+        <p class="main-container__intro--p">
+          CalcBot es tu calculadora personal, aquí puedes calcular medidas de
+          figuras geométricas, descuentos de tus productos y mucho más.
+        </p>
+        <div class="main-container__intro--btn-container">
+          <a href="#sectionFigures" class="main-container__intro--button"
+            >FIGURAS GEOMÉTRICAS</a
+          >
+          <a
+            href="#sectionDiscounts"
+            class="main-container__intro--button button-discounts"
+            >DESCUENTOS</a
+          >
+          <a
+            href="#sectionAverages"
+            class="main-container__intro--button button-averages"
+            >PROMEDIOS</a
+          >
+        </div>
+      </section>
+      <!-- GEOMETRIC FIGURES -->
+      <section class="main-container__figures" id="sectionFigures">
+        <h2 class="main-container__figures--title">FIGURAS GEOMÉTRICAS</h2>
+        <p class="main-container__figures--p">
+          Calcula el perímetro, diametro y área de las figuras geométricas como la circunferencia, triángulo y el cuadrado. <br><br>
+          
+          Debes poner los valores en los campos y luego dar click a la medida que deseas calcular.
+        </p>
+        <div class="container-figures">
+          <!-- SQUARE SECTION -->
+          <section class="container square-container">
+            <header class="container__header">
+              <figure class="header__figure">
+                <img src="./img/square.svg" alt="" />
+              </figure>
+              <h3 class="header__title">cuadrado</h3>
+            </header>
+            <em>
+              <p class="container__p">¿Cuánto mide cada lado del cuadrado?</p>
+            </em>
+            <form class="square-form-container">
+              <div class="square-form-container__wrapper">
+                <div class="form__input-container">
+                  <label for="SquareInput" class="form__label"> Lado </label>
+                  <input id="SquareInput" type="number" class="form__input" />
+                </div>
+                <select name="measure" id="measure" class="form__select">
+                  <option value="cm" class="form__select--option">cm</option>
+                  <option value="m" class="form__select--option">m</option>
+                </select>
+              </div>
+              <button
+                type="button"
+                onclick="calcSquarePerimeter()"
+                class="form__button"
+              >
+                Perímetro
+              </button>
+              <button
+                type="button"
+                onclick="calcSquareArea()"
+                class="form__button"
+              >
+                Área
+              </button>
+            </form>
+            <p class="container__result--p" id="SquareOutput"></p>
+          </section>
+          <!-- TRIANGLE SECTION -->
+          <section class="container triangle-container">
+            <header class="container__header">
+              <figure class="header__figure">
+                <img src="./img/triangle.svg" alt="" />
+              </figure>
+              <h3 class="header__title">triángulo isósceles</h3>
+            </header>
+            <em>
+              <p class="container__p">
+                ¿Cuánto mide cada lado del triángulo "isósceles"?
+              </p>
+            </em>
+            <form class="triangle-container__form">
+              <div class="triangle-form-container__wrapper--triangle">
+                <div
+                  class="form__input-container form__input-container--triangle"
+                >
+                  <label for="TriangleInput1" class="form__label">
+                    Lados
+                  </label>
+                  <input
+                    id="TriangleInput1"
+                    type="number"
+                    class="form__input"
+                  />
+                </div>
+                <div
+                  class="form__input-container form__input-container--triangle"
+                >
+                  <label for="TriangleInput2" class="form__label"> Base </label>
+                  <input
+                    id="TriangleInput2"
+                    type="number"
+                    class="form__input"
+                  />
+                </div>
+                <select
+                  name="measure2"
+                  id="measure2"
+                  class="form__select triangle_select"
+                >
+                  <option value="cm" class="form__select--option">cm</option>
+                  <option value="m" class="form__select--option">m</option>
+                </select>
+              </div>
+              <button
+                type="button"
+                onclick="calcTrianglePerimeter()"
+                class="form__button"
+              >
+                Perímetro
+              </button>
+              <button
+                type="button"
+                onclick="calcTriangleArea()"
+                class="form__button"
+              >
+                Área
+              </button>
+            </form>
+            <p class="container__result--p" id="triangleOutput"></p>
+          </section>
+          <!-- CIRCUMFERENCE SECTION -->
+          <section class="container circle-container">
+            <header class="container__header">
+              <figure class="header__figure">
+                <img src="./img/circle.svg" alt="" />
+              </figure>
+              <h3 class="header__title">circunferencia</h3>
+            </header>
+            <em>
+              <p class="container__p">
+                ¿Cuánto mide el radio de la circunferencia?
+              </p>
+            </em>
+            <form class="circle-container__form">
+              <div class="circle-form-container__wrapper">
+                <div class="form__input-container">
+                  <label for="circleInput" class="form__label"> Radio </label>
+                  <input id="circleInput" type="number" class="form__input" />
+                </div>
+                <select name="measure3" id="measure3" class="form__select">
+                  <option value="cm" class="form__select--option">cm</option>
+                  <option value="m" class="form__select--option">m</option>
+                </select>
+              </div>
+              <button
+                type="button"
+                onclick="calcCirclePerimeter()"
+                class="form__button"
+              >
+                Perímetro
+              </button>
+              <button
+                type="button"
+                onclick="calcCircleDiameter()"
+                class="form__button"
+              >
+                Diámetro
+              </button>
+              <button
+                type="button"
+                onclick="calcCircleArea()"
+                class="form__button"
+              >
+                Área
+              </button>
+            </form>
+            <p class="container__result--p" id="circleOutput"></p>
+          </section>
+        </div>
+      </section>
+
+
+      <!-- DISCOUNTS -->
+      <section class="main-container__discounts" id="sectionDiscounts">
+        <h2 class="main-container__discounts--title">DESCUENTOS</h2>
+        <p class="main-container__discounts--p">
+            Calcula el precio de tus productos con descuentos. <br><br>
+
+            Solo debes poner el precio del producto en el campo y si tienes cupones de descuento los debes agregar en el campo correspondiente y verás el precio de tu producto con el descuento aplicado.
+        </p>
+        <section class="container discounts-container">
+          <header class="container__header">
+            <figure class="header__figure">
+              <img src="./img/discounts.svg" alt="" />
+            </figure>
+            <h3 class="header__title">descuentos</h3>
+          </header>
+          <em>
+            <p class="container__p">Escribe el precio de tu producto</p>
+          </em>
+          <form class="discount-container__form">
+            <div class="discount-form-container__wrapper">
+              <div class="form__input-container">
+                <label for="discountInput" class="form__label"> Precio </label>
+                <input id="discountInput" type="number" class="form__input" />
+              </div>
+              <select name="badge" id="" class="form__select">
+                <option value="COP" class="form__select--option">COP</option>
+                <option value="USD" class="form__select--option">USD</option>
+                <option value="EUR" class="form__select--option">EUR</option>
+              </select>
+            </div>
+            <em>
+                <p class="container__p">Escribe el cupón de descuento</p>
+              </em>
+            <div class="form__input-container form__input-container--discount">
+              <label for="couponInput" class="form__label"> Cupón </label>
+              <input id="couponInput" type="text" class="form__input" />
+            </div>
+            <button
+              type="button"
+              onclick="calcCirclePerimeter()"
+              class="form__button"
+            >
+              Perímetro
+            </button>
+            <button
+              type="button"
+              onclick="calcCircleDiameter()"
+              class="form__button"
+            >
+              Diámetro
+            </button>
+            <button
+              type="button"
+              onclick="calcCircleArea()"
+              class="form__button"
+            >
+              Área
+            </button>
+          </form>
+          <p class="container__result--p" id=""></p>
+        </section>
+      </section>
+      <!-- AVERAGES -->
+      <section class="main-container__averages" id="sectionAverages"></section>
+      <footer class="main-footer"></footer>
+    </main>
+  </body>
 </html>

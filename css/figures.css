@@ -1,0 +1,35 @@
+/* CONTAINERS */
+
+.triangle-container {
+    height: 38rem;
+    max-height: 50rem;
+}
+
+/* FORMS */
+
+.form__input-container {
+    display: flex;
+    flex-direction:column;
+    width: 80%;
+}
+.form__input-container--triangle {
+    width: 95%;
+}
+.form__input {
+    height: 3rem;
+    padding: 1rem;
+    margin: .5rem 0;
+
+    outline: none;
+    border: none;
+    background-color: var(--gray-light);
+    border-radius: 1.5rem;
+}
+.form__input:hover {
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(123,124,140,1);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(123,124,140,1);
+    box-shadow: 0px 0px 4px 0px rgba(123,124,140,1);
+}
+.triangle_select {
+    margin: .5rem 0;
+}
