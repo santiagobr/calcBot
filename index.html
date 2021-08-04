@@ -253,7 +253,7 @@
             <div class="discount-form-container__wrapper">
               <div class="form__input-container">
                 <label for="discountInput" class="form__label"> Precio </label>
-                <input id="discountInput" type="number" class="form__input" />
+                <input id="PriceInput" type="number" class="form__input" />
               </div>
               <select name="badge" id="" class="form__select">
                 <option value="COP" class="form__select--option">COP</option>
@@ -266,7 +266,7 @@
               </em>
             <div class="form__input-container form__input-container--discount">
               <label for="couponInput" class="form__label"> Cupón </label>
-              <input id="couponInput" type="text" class="form__input" />
+              <input id="CouponInput" type="text" class="form__input" />
             </div>
             <button
               type="button"
@@ -276,12 +276,15 @@
               Calcular 
             </button>
           </form>
-          <p class="container__result--p" id=""></p>
+          <p class="container__result--p" id="PriceOutput"></p>
         </section>
       </section>
       <!-- AVERAGES -->
       <section class="main-container__averages" id="sectionAverages"></section>
       <footer class="main-footer"></footer>
     </main>
+
+    <script src="./js/figures.js"></script>
+    <script src="./js/discounts.js"></script>
   </body>
 </html>
