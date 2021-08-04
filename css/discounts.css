@@ -1,0 +1,9 @@
+/* CONTAINER */
+.discounts-container {
+    height: 36rem;
+}
+
+/* FORM */
+.form__input-container--discount {
+    width: 95%;
+}
