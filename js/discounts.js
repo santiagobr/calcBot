@@ -27,12 +27,16 @@ function priceDiscountBtn() {
   const CouponInput = document.getElementById("CouponInput");
   const couponValue = CouponInput.value;
 
+  const Badge = document.getElementById('badge');
+  const badgeValue = Badge.value;
+  
   const isCouponValueValid = function (coupon) {
-    return coupon.name === couponValue;
-  };
-
-  const userCoupon = coupons.find(isCouponValueValid);
-
+      return coupon.name === couponValue;
+    };
+    
+    const userCoupon = coupons.find(isCouponValueValid);
+    
+    
   if (!userCoupon) {
     const PriceOutput = document.getElementById("PriceOutput");
     PriceOutput.innerText = `El cupón ${couponValue} no es válido. El precio del producto es: ${priceValue}`;
@@ -42,6 +46,6 @@ function priceDiscountBtn() {
 
     const priceWithDiscount = parseFloat(calcPriceWithDiscount(priceValue, discount));
 
-    PriceOutput.innerText = `El precio con descuento es ${priceWithDiscount}`;
+    PriceOutput.innerText = `El precio con descuento es ${priceWithDiscount} ${badgeValue}`;
   }
 }
