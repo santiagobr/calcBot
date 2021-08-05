@@ -72,9 +72,11 @@
       <section class="main-container__figures" id="sectionFigures">
         <h2 class="main-container__figures--title">FIGURAS GEOMÉTRICAS</h2>
         <p class="main-container__figures--p">
-          Calcula el perímetro, diametro y área de las figuras geométricas como la circunferencia, triángulo y el cuadrado. <br><br>
-          
-          Debes poner los valores en los campos y luego dar click a la medida que deseas calcular.
+          Calcula el perímetro, diametro y área de las figuras geométricas como
+          la circunferencia, triángulo y el cuadrado. <br /><br />
+
+          Debes poner los valores en los campos y luego dar click a la medida
+          que deseas calcular.
         </p>
         <div class="container-figures">
           <!-- SQUARE SECTION -->
@@ -92,7 +94,12 @@
               <div class="square-form-container__wrapper">
                 <div class="form__input-container">
                   <label for="SquareInput" class="form__label"> Lado </label>
-                  <input id="SquareInput" type="number" class="form__input" />
+                  <input
+                    id="SquareInput"
+                    type="number"
+                    class="form__input"
+                    placeholder="15"
+                  />
                 </div>
                 <select name="measure" id="measure" class="form__select">
                   <option value="cm" class="form__select--option">cm</option>
@@ -141,6 +148,7 @@
                     id="TriangleInput1"
                     type="number"
                     class="form__input"
+                    placeholder="12"
                   />
                 </div>
                 <div
@@ -151,6 +159,7 @@
                     id="TriangleInput2"
                     type="number"
                     class="form__input"
+                    placeholder="10"
                   />
                 </div>
                 <select
@@ -196,7 +205,7 @@
               <div class="circle-form-container__wrapper">
                 <div class="form__input-container">
                   <label for="circleInput" class="form__label"> Radio </label>
-                  <input id="circleInput" type="number" class="form__input" />
+                    <input id="circleInput" type="number" class="form__input" placeholder="15"/>
                 </div>
                 <select name="measure3" id="measure3" class="form__select">
                   <option value="cm" class="form__select--option">cm</option>
@@ -230,14 +239,15 @@
         </div>
       </section>
 
-
       <!-- DISCOUNTS -->
       <section class="main-container__discounts" id="sectionDiscounts">
         <h2 class="main-container__discounts--title">DESCUENTOS</h2>
         <p class="main-container__discounts--p">
-            Calcula el precio de tus productos con descuentos. <br><br>
+          Calcula el precio de tus productos con descuentos. <br /><br />
 
-            Solo debes poner el precio del producto en el campo y si tienes cupones de descuento los debes agregar en el campo correspondiente y verás el precio de tu producto con el descuento aplicado.
+          Solo debes poner el precio del producto en el campo y si tienes
+          cupones de descuento los debes agregar en el campo correspondiente y
+          verás el precio de tu producto con el descuento aplicado.
         </p>
         <section class="container discounts-container">
           <header class="container__header">
@@ -253,7 +263,7 @@
             <div class="discount-form-container__wrapper">
               <div class="form__input-container">
                 <label for="discountInput" class="form__label"> Precio </label>
-                <input id="PriceInput" type="number" class="form__input" />
+                <input id="PriceInput" type="number" class="form__input" placeholder="10500"/>
               </div>
               <select name="badge" id="badge" class="form__select">
                 <option value="COP" class="form__select--option">COP</option>
@@ -262,18 +272,18 @@
               </select>
             </div>
             <em>
-                <p class="container__p">Escribe el cupón de descuento</p>
-              </em>
+              <p class="container__p">Escribe el cupón de descuento</p>
+            </em>
             <div class="form__input-container form__input-container--discount">
               <label for="couponInput" class="form__label"> Cupón </label>
-              <input id="CouponInput" type="text" class="form__input" />
+              <input id="CouponInput" type="text" class="form__input" placeholder="promocion-15"/>
             </div>
             <button
               type="button"
               onclick="priceDiscountBtn()"
               class="form__button"
             >
-              Calcular 
+              Calcular
             </button>
           </form>
           <p class="container__result--p" id="PriceOutput"></p>
