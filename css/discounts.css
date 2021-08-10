@@ -1,9 +1,13 @@
 /* CONTAINER */
 .discounts-container {
-    height: 36rem;
+    max-height: 38rem;
+    height: auto;
 }
 
 /* FORM */
 .form__input-container--discount {
-    width: 95%;
+    width: 30%;
+}
+.form__input--discount {
+    text-align: center;
 }

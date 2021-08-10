@@ -256,8 +256,7 @@
         <p class="main-container__discounts--p">
           Calcula el precio de tus productos con descuentos. <br /><br />
 
-          Solo debes poner el precio del producto en el campo y si tienes
-          cupones de descuento los debes agregar en el campo correspondiente y
+          Solo debes poner el precio del producto en el campo y el descuento que quieres aplicar en el campo correspondiente, luego
           verás el precio de tu producto con el descuento aplicado.
         </p>
         <section class="container discounts-container">
@@ -277,7 +276,7 @@
                 <input
                   id="PriceInput"
                   type="number"
-                  class="form__input"
+                  class="form__input form__input--discount-price"
                   placeholder="10500"
                 />
               </div>
@@ -288,15 +287,15 @@
               </select>
             </div>
             <em>
-              <p class="container__p">Escribe el cupón de descuento</p>
+              <p class="container__p">Escribe el descuento</p>
             </em>
             <div class="form__input-container form__input-container--discount">
-              <label for="couponInput" class="form__label"> Cupón </label>
+              <label for="couponInput" class="form__label"> Descuento </label>
               <input
                 id="CouponInput"
                 type="text"
-                class="form__input"
-                placeholder="promocion-15"
+                class="form__input form__input--discount"
+                placeholder="20"
               />
             </div>
             <button
