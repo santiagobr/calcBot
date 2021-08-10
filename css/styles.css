@@ -238,11 +238,13 @@ label {
 
 /* INDEX */
 .main-container__figures--title,
-.main-container__discounts--title {
+.main-container__discounts--title,
+.main-container__statistics--title {
     margin: 3rem 0;
 }
 .main-container__figures--p, 
-.main-container__discounts--p {
+.main-container__discounts--p,
+.main-container__statistics--p {
     margin-bottom: 3rem;
 }
 

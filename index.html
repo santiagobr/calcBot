@@ -20,6 +20,12 @@
       href="./css/discounts_desktop.css"
       media="screen and (min-width: 1200px)"
     />
+    <link rel="stylesheet" href="./css/statistics.css" />
+    <link
+      rel="stylesheet"
+      href="./css/statistics-desktop.css"
+      media="screen and (min-width: 1200px)"
+    />
 
     <!-- Fontawesome -->
     <link
@@ -50,7 +56,7 @@
       <section class="main-container__intro">
         <p class="main-container__intro--p">
           CalcBot es tu calculadora personal, aquí puedes calcular medidas de
-          figuras geométricas, descuentos de tus productos y mucho más.
+          figuras geométricas, descuentos de tus productos y estadísticas.
         </p>
         <div class="main-container__intro--btn-container">
           <a href="#sectionFigures" class="main-container__intro--button"
@@ -64,7 +70,7 @@
           <a
             href="#sectionAverages"
             class="main-container__intro--button button-averages"
-            >PROMEDIOS</a
+            >ESTADÍSTICAS</a
           >
         </div>
       </section>
@@ -205,7 +211,12 @@
               <div class="circle-form-container__wrapper">
                 <div class="form__input-container">
                   <label for="circleInput" class="form__label"> Radio </label>
-                    <input id="circleInput" type="number" class="form__input" placeholder="15"/>
+                  <input
+                    id="circleInput"
+                    type="number"
+                    class="form__input"
+                    placeholder="15"
+                  />
                 </div>
                 <select name="measure3" id="measure3" class="form__select">
                   <option value="cm" class="form__select--option">cm</option>
@@ -263,7 +274,12 @@
             <div class="discount-form-container__wrapper">
               <div class="form__input-container">
                 <label for="discountInput" class="form__label"> Precio </label>
-                <input id="PriceInput" type="number" class="form__input" placeholder="10500"/>
+                <input
+                  id="PriceInput"
+                  type="number"
+                  class="form__input"
+                  placeholder="10500"
+                />
               </div>
               <select name="badge" id="badge" class="form__select">
                 <option value="COP" class="form__select--option">COP</option>
@@ -276,7 +292,12 @@
             </em>
             <div class="form__input-container form__input-container--discount">
               <label for="couponInput" class="form__label"> Cupón </label>
-              <input id="CouponInput" type="text" class="form__input" placeholder="promocion-15"/>
+              <input
+                id="CouponInput"
+                type="text"
+                class="form__input"
+                placeholder="promocion-15"
+              />
             </div>
             <button
               type="button"
@@ -290,11 +311,121 @@
         </section>
       </section>
       <!-- AVERAGES -->
-      <section class="main-container__averages" id="sectionAverages"></section>
+      <section class="main-container__averages" id="sectionAverages">
+        <h2 class="main-container__statistics--title">ESTADÍSTICAS</h2>
+        <p class="main-container__discounts--p">
+          Calcula el promedio, la mediana y la moda de un listado que tengas.
+          <br /><br />
+
+          Solo debes escribir la lista en el campo de la siguiente forma:
+          <span class="discounts--p__example">1, 2, 3, 4</span>. Es decir, debes
+          escribir los números separados por comas " <strong>,</strong> ".
+        </p>
+        <div class="container-statistics">
+          <!-- AVERAGE -->
+          <section class="container average-container">
+            <header class="container__header">
+              <figure class="header__figure">
+                <img src="./img/average.svg" alt="" />
+              </figure>
+              <h3 class="header__title">promedio</h3>
+            </header>
+            <em>
+              <p class="container__p">Escribe tu lista de números</p>
+            </em>
+            <form class="average-container__form">
+              <div class="form__input-container form__input-container--statistics">
+                <label for="InputAverage" class="form__label"> Lista </label>
+                <input
+                  id="InputAverage"
+                  type="text"
+                  class="form__input"
+                  placeholder="100, 200, 300, 300, 500"
+                />
+              </div>
+              <button
+                type="button"
+                onclick="calcAverageBtn()"
+                class="form__button"
+              >
+                Calcular
+              </button>
+            </form>
+            <p class="container__result--p" id="OutputAverage"></p>
+          </section>
+          <!-- MODE -->
+          <section class="container mode-container">
+            <header class="container__header">
+              <figure class="header__figure">
+                <img src="./img/mode.svg" alt="" />
+              </figure>
+              <h3 class="header__title">moda</h3>
+            </header>
+            <em>
+              <p class="container__p">Escribe tu lista de números</p>
+            </em>
+            <form class="mode-container__form">
+              <div class="form__input-container form__input-container--statistics">
+                <label for="InputMode" class="form__label"> Lista </label>
+                <input
+                  id="InputMode"
+                  type="text"
+                  class="form__input"
+                  placeholder="100, 200, 300, 300, 500"
+                />
+              </div>
+              <button
+                type="button"
+                onclick="calcModeBtn()"
+                class="form__button"
+              >
+                Calcular
+              </button>
+            </form>
+            <p class="container__result--p" id="OutputMode"></p>
+          </section>
+          <!-- MEDIAN -->
+          <section class="container median-container">
+            <header class="container__header">
+              <figure class="header__figure">
+                <img src="./img/median.svg" alt="" />
+              </figure>
+              <h3 class="header__title">mediana</h3>
+            </header>
+            <em>
+              <p class="container__p">Escribe tu lista de números</p>
+            </em>
+            <form class="median-container__form">
+              <div class="form__input-container form__input-container--statistics">
+                <label for="InputMedian" class="form__label"> Lista </label>
+                <input
+                  id="InputMedian"
+                  type="text"
+                  class="form__input"
+                  placeholder="100, 200, 300, 300, 500"
+                />
+              </div>
+              <button
+                type="button"
+                onclick="calcMedianBtn()"
+                class="form__button"
+              >
+                Calcular
+              </button>
+            </form>
+            <p class="container__result--p" id="OutputMedian"></p>
+          </section>
+        </div>
+
+
+      </section>
       <footer class="main-footer"></footer>
     </main>
 
     <script src="./js/figures.js"></script>
     <script src="./js/discounts.js"></script>
+    <script src="./js/statistics/average.js"></script>
+    <script src="./js/statistics/median.js"></script>
+    <script src="./js/statistics/mode.js"></script>
   </body>
 </html>

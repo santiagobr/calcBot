@@ -1,0 +1,11 @@
+/* CONTAINER */
+.average-container,
+.mode-container,
+.median-container {
+  height: auto;
+}
+
+/* FORM */
+.form__input-container--statistics {
+  width: 95%;
+}
