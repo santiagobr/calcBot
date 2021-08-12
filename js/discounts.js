@@ -5,22 +5,28 @@ function calcPriceWithDiscount(price, coupon) {
   return priceWithDiscount;
 }
 
-function priceDiscountBtn() {
-  const PriceInput = document.getElementById("PriceInput");
-  const priceValue = PriceInput.value;
+// 
+const PriceInput = document.getElementById("PriceInput");
+const DiscountInput = document.getElementById("DiscountInput");
 
-  const CouponInput = document.getElementById("CouponInput");
-  const couponValue = CouponInput.value;
+const priceDiscountBtn = () => {
+  const priceValue = PriceInput.value;
+  const discountValue = DiscountInput.value;
 
   const Badge = document.getElementById("badge");
   const badgeValue = Badge.value;
 
   const PriceOutput = document.getElementById("PriceOutput");
-  const discount = couponValue;
+  const discount = discountValue;
 
   const priceWithDiscount = parseFloat(
     calcPriceWithDiscount(priceValue, discount)
-  );
+  ).toFixed(2);
 
-  PriceOutput.innerText = `El precio de tu producto con el ${couponValue}% es ${priceWithDiscount}${badgeValue}`
+  
+
+  PriceOutput.innerText = `El precio de tu producto con el ${discountValue}% de descuento es ${priceWithDiscount}${badgeValue}`
 }
+
+PriceInput.addEventListener('change', priceDiscountBtn)
+DiscountInput.addEventListener('change', priceDiscountBtn)
